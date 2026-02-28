@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/smallTextSetting"
+        android:title="@string/small"/>
+
+    <item
+        android:id="@+id/normalTextSetting"
+        android:title="@string/normal"/>
+
+    <item
+        android:id="@+id/largeTextSetting"
+        android:title="@string/large"/>
+
+    <item
+        android:id="@+id/extraLargeTextSetting"
+        android:title="@string/extra_large"/>
+</menu>

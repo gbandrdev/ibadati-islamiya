@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/infoText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="@dimen/margin_standard"
+                android:text="@string/about"
+                android:textSize="@dimen/text_normal"
+                android:textAlignment="center"
+                tools:ignore="SpUsage" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/contactsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/infoText"
+                android:layout_marginTop="@dimen/margin_standard">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/contactMe"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:padding="4dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/contactTexnoPOS"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/me"
+                    app:civ_circle_background_color="@color/dark"
+                    app:civ_border_color="@color/app_color"
+                    app:civ_border_width="6dp"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/contactMeClick"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:layout_constraintStart_toStartOf="@id/contactMe"
+                    app:layout_constraintTop_toTopOf="@id/contactMe"
+                    app:layout_constraintEnd_toEndOf="@id/contactMe"
+                    app:layout_constraintBottom_toBottomOf="@id/contactMe"
+                    app:lottie_fileName="click.json"
+                    app:lottie_autoPlay="false"
+                    app:lottie_loop="false"/>
+
+                <TextView
+                    android:id="@+id/contactMeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/contactMe"
+                    app:layout_constraintEnd_toEndOf="@id/contactMe"
+                    app:layout_constraintTop_toBottomOf="@id/contactMe"
+                    android:text="Хакимов\nЖақсыбай"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/margin_standard"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/contactTexnoPOS"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:padding="4dp"
+                    app:layout_constraintStart_toEndOf="@id/contactMe"
+                    app:layout_constraintEnd_toEndOf="@id/contactPaziylet"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/texnopos"
+                    app:civ_circle_background_color="@color/dark"
+                    app:civ_border_color="@color/app_color"
+                    app:civ_border_width="6dp"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/contactTexnoPOSClick"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:layout_constraintStart_toStartOf="@id/contactTexnoPOS"
+                    app:layout_constraintTop_toTopOf="@id/contactTexnoPOS"
+                    app:layout_constraintEnd_toEndOf="@id/contactTexnoPOS"
+                    app:layout_constraintBottom_toBottomOf="@id/contactTexnoPOS"
+                    app:lottie_fileName="click.json"
+                    app:lottie_autoPlay="false"
+                    app:lottie_loop="false"/>
+
+                <TextView
+                    android:id="@+id/contactTexnoPOSTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/contactTexnoPOS"
+                    app:layout_constraintEnd_toEndOf="@id/contactTexnoPOS"
+                    app:layout_constraintTop_toBottomOf="@id/contactTexnoPOS"
+                    android:text="TexnoPOS\nIT Mektebi"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/margin_standard"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/contactPaziylet"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:padding="4dp"
+                    app:layout_constraintStart_toEndOf="@id/contactTexnoPOS"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/paziylet"
+                    app:civ_circle_background_color="@color/dark"
+                    app:civ_border_color="@color/app_color"
+                    app:civ_border_width="6dp"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/contactPaziyletClick"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:layout_constraintStart_toStartOf="@id/contactPaziylet"
+                    app:layout_constraintTop_toTopOf="@id/contactPaziylet"
+                    app:layout_constraintEnd_toEndOf="@id/contactPaziylet"
+                    app:layout_constraintBottom_toBottomOf="@id/contactPaziylet"
+                    app:lottie_fileName="click.json"
+                    app:lottie_autoPlay="false"
+                    app:lottie_loop="false"/>
+
+                <TextView
+                    android:id="@+id/contactPaziyletTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/contactPaziylet"
+                    app:layout_constraintEnd_toEndOf="@id/contactPaziylet"
+                    app:layout_constraintTop_toBottomOf="@id/contactPaziylet"
+                    android:text="Paziylet.uz"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/margin_standard"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/dividerInInfoPage"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gold_divider"
+                android:tint="@color/app_color"
+                app:layout_constraintTop_toBottomOf="@id/contactsLayout"
+                app:layout_constraintBottom_toTopOf="@id/aboutBookItem"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="@dimen/margin_standard"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/aboutBookItem"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                app:layout_constraintTop_toBottomOf="@id/dividerInInfoPage"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:focusable="true">
+
+                <View
+                    android:id="@+id/aboutBookItemDivider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/aboutBookText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/aboutBookItemDivider1"
+                    app:layout_constraintBottom_toBottomOf="@id/aboutBookItemDivider2"
+                    app:layout_constraintEnd_toStartOf="@id/goToIcon"
+                    android:layout_marginStart="@dimen/margin_standard"
+                    android:gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_standard"
+                    android:text="@string/about_book_title"
+                    android:textSize="20dp"
+                    tools:ignore="SpUsage" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/goToIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_outline_arrow_right_24"
+                    android:tint="?attr/iconTintColor"
+                    app:layout_constraintTop_toBottomOf="@id/aboutBookItemDivider1"
+                    app:layout_constraintBottom_toTopOf="@id/aboutBookItemDivider2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="@dimen/margin_standard"/>
+
+                <View
+                    android:id="@+id/aboutBookItemDivider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:layout_constraintBottom_toBottomOf="@id/aboutBookItem"
+                    android:background="?android:attr/listDivider"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/aboutAuthorItem"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                app:layout_constraintTop_toBottomOf="@id/aboutBookItem"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/aboutAuthorText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/aboutAuthorItemDivider"
+                    app:layout_constraintEnd_toStartOf="@id/goToIcon2"
+                    android:layout_marginStart="@dimen/margin_standard"
+                    android:gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_standard"
+                    android:text="@string/about_author_title"
+                    android:textSize="20dp"
+                    tools:ignore="SpUsage" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/goToIcon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_outline_arrow_right_24"
+                    android:tint="?attr/iconTintColor"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/aboutAuthorItemDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="@dimen/margin_standard"/>
+
+                <View
+                    android:id="@+id/aboutAuthorItemDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:layout_constraintBottom_toBottomOf="@id/aboutAuthorItem"
+                    android:background="?android:attr/listDivider"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
